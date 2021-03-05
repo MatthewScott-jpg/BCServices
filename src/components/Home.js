@@ -38,7 +38,7 @@ function Home(props){
     function handleEditNDOS(row, task){    
         /* if j===row and item === true, aquire date from form, edit in store context */
         if (toggleEdit.list[row] === true && newDate !== ''){
-            editNDOS(buildingId, newDate, task);
+            editNDOS(current_building, newDate, task);
             setNewDate('');
         }
         setToggleEdit({
@@ -71,7 +71,7 @@ function Home(props){
 
     //handler for adding rows
     function handleAddRow(event){
-        addRow(buildingId, newRow.name, newRow.size, newRow.quantity, newRow.rating, newRow.ldos, newRow.ndos, true);
+        addRow(current_building, newRow.name, newRow.size, newRow.quantity, newRow.rating, newRow.ldos, newRow.ndos, true);
         setNewRow({name:'', size:'', quantity:'', rating:'', ldos:'', ndos:''})
         setToggleAdder(false);
         setToggleEdit({
@@ -174,7 +174,7 @@ function Home(props){
                                             <input type="checkbox" onClick={(e) => handleCheckbox(e, current_building, item.status, item.name)}/>
                                             <span className={css.checkmark}></span>
                                         </label>
-                                        <button className={css.edit} style={toggleEdit.list[i]?{backgroundColor: 'yellow'}:{backgroundColor: 'inherit'}} onClick={() => handleEditNDOS(i, item.name)}>
+                                        <button className={css.edit} style={toggleEdit.list[i]?{backgroundColor: '#d4af37'}:{backgroundColor: 'inherit'}} onClick={() => handleEditNDOS(i, item.name)}>
                                             <img src={publicUrl('/assets/edit.svg')} alt='Edit'/>
                                         </button>
                                         <button className={css.trash} onClick={(e) => handleTrash(e, current_building, item.name, i)}>

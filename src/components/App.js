@@ -17,6 +17,9 @@ function App() {
               <Route path="/:buildingId?">
                 <Home/>
               </Route>
+              <Route path="/">
+                <Home/>
+              </Route>
             </Switch>
           </main>
         </div>

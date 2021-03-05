@@ -13,6 +13,13 @@
   width: 7%;
 }
 
+.submitButton{
+  border: none;
+  background-color: #d4af37;;
+  padding: 6px 30px;
+  margin: auto;
+}
+
 .plus input {
   border: none;
   width: 13%;

@@ -55,7 +55,6 @@ function StoreContextProvider(props){
     function editNDOS(buildingID, newNDOS,task){
         const today = new Date();
         newNDOS = newNDOS+"T00:00:00";
-        console.log("hi")
         setStore({
           ...store,
           buildings: store.buildings.map(
